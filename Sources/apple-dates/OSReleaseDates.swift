@@ -537,7 +537,23 @@ public struct OSReleaseDates: Sendable {
     releases.first { $0.version == version }?.releaseDate
   }
 
+  public static func iosReleaseDateString(forVersion version: String) -> String? {
+    releaseDateString(forVersion: version, in: ios)
+  }
+
+  public static func ipadosReleaseDateString(forVersion version: String) -> String? {
+    releaseDateString(forVersion: version, in: ipados)
+  }
+
   public static func macosReleaseDateString(forVersion version: String) -> String? {
     releaseDateString(forVersion: version, in: macos)
+  }
+
+  public static func watchosReleaseDateString(forVersion version: String) -> String? {
+    releaseDateString(forVersion: version, in: watchos)
+  }
+
+  public static func tvosReleaseDateString(forVersion version: String) -> String? {
+    releaseDateString(forVersion: version, in: tvos)
   }
 }
