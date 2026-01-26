@@ -1,0 +1,66 @@
+name: Publish AppleDates DocC (GitHub Pages)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: docc-pages
+  cancel-in-progress: true
+
+env:
+  DOCS_OUTPUT: _site
+  DOCS_BASE_PATH: ${{ github.event.repository.name }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '6.1'
+
+      - name: Render DocC
+        shell: bash
+        run: |
+          set -euo pipefail
+          swift package \
+            --package-path . \
+            --allow-writing-to-directory "$GITHUB_WORKSPACE/$DOCS_OUTPUT" \
+            generate-documentation \
+            --target AppleDates \
+            --output-path "$GITHUB_WORKSPACE/$DOCS_OUTPUT" \
+            --transform-for-static-hosting \
+            --hosting-base-path "$DOCS_BASE_PATH"
+
+      - name: Add .nojekyll
+        shell: bash
+        run: |
+          set -euo pipefail
+          touch "$GITHUB_WORKSPACE/$DOCS_OUTPUT/.nojekyll"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.DOCS_OUTPUT }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
