@@ -6,7 +6,7 @@ let package = Package(
   name: "AppleDates",
   platforms: [
     .iOS(.v13),
-    .macOS(.v13),
+    .macOS(.v15),
     .tvOS(.v13),
     .watchOS(.v6),
     .visionOS(.v1),
