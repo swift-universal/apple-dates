@@ -18,6 +18,11 @@ let package = Package(
     .target(
       name: "AppleDates",
       path: "Sources/apple-dates"
-    )
+    ),
+    .testTarget(
+      name: "AppleDatesTests",
+      dependencies: ["AppleDates"],
+      path: "Tests/AppleDatesTests"
+    ),
   ]
 )
