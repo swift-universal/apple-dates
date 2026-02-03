@@ -1,10 +1,10 @@
-# CorePlatformMetrics
+# CoreAppleDates
 
 @Metadata {
   @TechnologyRoot
 }
 
-CorePlatformMetrics provides curated, static timelines for Apple OS releases so tools and docs can
+CoreAppleDates provides curated, static timelines for Apple OS releases so tools and docs can
 reference availability without hitting the network.
 
 ## What it covers

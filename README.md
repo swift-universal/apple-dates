@@ -1,29 +1,42 @@
-# CorePlatformMetrics
+# swift-core-platform-metrics
 
-Static, curated release timelines for Apple platforms (iOS, iPadOS, macOS, watchOS, tvOS).
+Curated Apple platform timelines and device statistics for offline, deterministic tooling.
 
 ## Usage
 
-Add the package and import the module:
+Add the package and import the module you need:
 
 ```swift
-import CorePlatformMetrics
+import CoreAppleDates
 
 let releases = OSReleaseDates.macos
 ```
 
+```swift
+import CoreAppleDeviceStatistics
+
+let categories = AppleDeviceStatistics.categories
+```
+
 ## Documentation
 
-DocC bundle lives at:
+DocC bundles live at:
 
-`Sources/core-platform-metrics/core-platform-metrics.docc`
+- `sources/core-apple-dates/core-apple-dates.docc`
+- `sources/core-apple-device-statistics/core-apple-device-statistics.docc`
 
 Preview locally:
 
 ```bash
 xcrun docc preview \
-  Sources/core-platform-metrics/core-platform-metrics.docc \
-  --fallback-display-name "CorePlatformMetrics" \
+  sources/core-apple-dates/core-apple-dates.docc \
+  --fallback-display-name "CoreAppleDates" \
+  --fallback-bundle-identifier "me.wrkstrm.swift-core-platform-metrics" \
+  --fallback-bundle-version "1.0.0"
+
+xcrun docc preview \
+  sources/core-apple-device-statistics/core-apple-device-statistics.docc \
+  --fallback-display-name "CoreAppleDeviceStatistics" \
   --fallback-bundle-identifier "me.wrkstrm.swift-core-platform-metrics" \
   --fallback-bundle-version "1.0.0"
 ```

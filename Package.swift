@@ -12,17 +12,22 @@ let package = Package(
     .visionOS(.v1),
   ],
   products: [
-    .library(name: "CorePlatformMetrics", targets: ["CorePlatformMetrics"])
+    .library(name: "CoreAppleDates", targets: ["CoreAppleDates"]),
+    .library(name: "CoreAppleDeviceStatistics", targets: ["CoreAppleDeviceStatistics"]),
   ],
   targets: [
     .target(
-      name: "CorePlatformMetrics",
-      path: "Sources/core-platform-metrics"
+      name: "CoreAppleDates",
+      path: "sources/core-apple-dates"
+    ),
+    .target(
+      name: "CoreAppleDeviceStatistics",
+      path: "sources/core-apple-device-statistics"
     ),
     .testTarget(
-      name: "CorePlatformMetricsTests",
-      dependencies: ["CorePlatformMetrics"],
-      path: "Tests/CorePlatformMetricsTests"
+      name: "CoreAppleDatesTests",
+      dependencies: ["CoreAppleDates"],
+      path: "tests/core-apple-dates-tests"
     ),
   ]
 )
