@@ -1,4 +1,4 @@
-# AppleDates
+# CorePlatformMetrics
 
 Static, curated release timelines for Apple platforms (iOS, iPadOS, macOS, watchOS, tvOS).
 
@@ -7,7 +7,7 @@ Static, curated release timelines for Apple platforms (iOS, iPadOS, macOS, watch
 Add the package and import the module:
 
 ```swift
-import AppleDates
+import CorePlatformMetrics
 
 let releases = OSReleaseDates.macos
 ```
@@ -16,15 +16,15 @@ let releases = OSReleaseDates.macos
 
 DocC bundle lives at:
 
-`Sources/apple-dates/apple-dates.docc`
+`Sources/core-platform-metrics/core-platform-metrics.docc`
 
 Preview locally:
 
 ```bash
 xcrun docc preview \
-  Sources/apple-dates/apple-dates.docc \
-  --fallback-display-name "AppleDates" \
-  --fallback-bundle-identifier "me.wrkstrm.apple-dates" \
+  Sources/core-platform-metrics/core-platform-metrics.docc \
+  --fallback-display-name "CorePlatformMetrics" \
+  --fallback-bundle-identifier "me.wrkstrm.swift-core-platform-metrics" \
   --fallback-bundle-version "1.0.0"
 ```
 

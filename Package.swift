@@ -3,7 +3,7 @@ import Foundation
 import PackageDescription
 
 let package = Package(
-  name: "AppleDates",
+  name: "swift-core-platform-metrics",
   platforms: [
     .iOS(.v13),
     .macOS(.v15),
@@ -12,17 +12,17 @@ let package = Package(
     .visionOS(.v1),
   ],
   products: [
-    .library(name: "AppleDates", targets: ["AppleDates"])
+    .library(name: "CorePlatformMetrics", targets: ["CorePlatformMetrics"])
   ],
   targets: [
     .target(
-      name: "AppleDates",
-      path: "Sources/apple-dates"
+      name: "CorePlatformMetrics",
+      path: "Sources/core-platform-metrics"
     ),
     .testTarget(
-      name: "AppleDatesTests",
-      dependencies: ["AppleDates"],
-      path: "Tests/AppleDatesTests"
+      name: "CorePlatformMetricsTests",
+      dependencies: ["CorePlatformMetrics"],
+      path: "Tests/CorePlatformMetricsTests"
     ),
   ]
 )

@@ -1,4 +1,4 @@
-import AppleDates
+import CorePlatformMetrics
 import Testing
 
 @Test("Release dates are populated")

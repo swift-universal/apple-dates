@@ -1,6 +1,6 @@
 # The Solution
 
-AppleDates packages release timelines as static Swift data.
+CorePlatformMetrics packages release timelines as static Swift data.
 
 - A small, typed model
   - ``OSRelease`` stores version, optional marketing name, announcement date, release date,
