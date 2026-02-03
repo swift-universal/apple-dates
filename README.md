@@ -1,6 +1,6 @@
 # swift-core-platform-metrics
 
-Curated Apple platform timelines and device statistics for offline, deterministic tooling.
+Curated platform timelines and device statistics for offline, deterministic tooling.
 
 ## Usage
 
@@ -10,6 +10,12 @@ Add the package and import the module you need:
 import CoreAppleDates
 
 let releases = OSReleaseDates.macos
+```
+
+```swift
+import CoreAndroidDates
+
+let releases = OSReleaseDates.android
 ```
 
 ```swift
@@ -28,7 +34,9 @@ let categories = AndroidDeviceStatistics.categories
 
 DocC bundles live at:
 
+- `sources/core-platform-dates/core-platform-dates.docc`
 - `sources/core-apple-dates/core-apple-dates.docc`
+- `sources/core-android-dates/core-android-dates.docc`
 - `sources/core-apple-device-statistics/core-apple-device-statistics.docc`
 - `sources/core-android-device-statistics/core-android-device-statistics.docc`
 
@@ -36,8 +44,20 @@ Preview locally:
 
 ```bash
 xcrun docc preview \
+  sources/core-platform-dates/core-platform-dates.docc \
+  --fallback-display-name "CorePlatformDates" \
+  --fallback-bundle-identifier "me.wrkstrm.swift-core-platform-metrics" \
+  --fallback-bundle-version "1.0.0"
+
+xcrun docc preview \
   sources/core-apple-dates/core-apple-dates.docc \
   --fallback-display-name "CoreAppleDates" \
+  --fallback-bundle-identifier "me.wrkstrm.swift-core-platform-metrics" \
+  --fallback-bundle-version "1.0.0"
+
+xcrun docc preview \
+  sources/core-android-dates/core-android-dates.docc \
+  --fallback-display-name "CoreAndroidDates" \
   --fallback-bundle-identifier "me.wrkstrm.swift-core-platform-metrics" \
   --fallback-bundle-version "1.0.0"
 

@@ -12,14 +12,26 @@ let package = Package(
     .visionOS(.v1),
   ],
   products: [
+    .library(name: "CorePlatformDates", targets: ["CorePlatformDates"]),
     .library(name: "CoreAppleDates", targets: ["CoreAppleDates"]),
+    .library(name: "CoreAndroidDates", targets: ["CoreAndroidDates"]),
     .library(name: "CoreAppleDeviceStatistics", targets: ["CoreAppleDeviceStatistics"]),
     .library(name: "CoreAndroidDeviceStatistics", targets: ["CoreAndroidDeviceStatistics"]),
   ],
   targets: [
     .target(
+      name: "CorePlatformDates",
+      path: "sources/core-platform-dates"
+    ),
+    .target(
       name: "CoreAppleDates",
+      dependencies: ["CorePlatformDates"],
       path: "sources/core-apple-dates"
+    ),
+    .target(
+      name: "CoreAndroidDates",
+      dependencies: ["CorePlatformDates"],
+      path: "sources/core-android-dates"
     ),
     .target(
       name: "CoreAppleDeviceStatistics",

@@ -4,7 +4,7 @@ CoreAppleDeviceStatistics provides a small, static dataset of Apple device metri
 
 - Structured categories for device families and themes.
 - Metrics marked as overall or breakdown data points.
-- Metrics that include the value, optional unit, and source URLs.
+- Metrics that include the value, optional unit, as-of date, and source URLs.
 - Local, deterministic data with no runtime network access.
 
 Update workflow
