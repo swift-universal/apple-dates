@@ -70,7 +70,24 @@ public enum AppleOSVersionMixes {
     ),
   ]
 
-  public static let macos: [AppleOSVersionMix] = []
+  public static let macos: [AppleOSVersionMix] = [
+    AppleOSVersionMix(
+      platform: .macos,
+      scope: .allDevices,
+      asOfDate: "2026-01-01",
+      entries: [
+        AppleOSVersionMixEntry(version: "macOS Catalina", sharePercent: 63.18),
+        AppleOSVersionMixEntry(version: "macOS 15.6", sharePercent: 6.67),
+        AppleOSVersionMixEntry(version: "macOS 15.7", sharePercent: 4.17),
+        AppleOSVersionMixEntry(version: "OS X 10.0 Cheetah", sharePercent: 2.82),
+        AppleOSVersionMixEntry(version: "macOS 15.5", sharePercent: 2.35),
+        AppleOSVersionMixEntry(version: "macOS Sierra", sharePercent: 1.77)
+      ],
+      sourceURLs: [
+        "https://gs.statcounter.com/macos-version-market-share/desktop/worldwide"
+      ]
+    )
+  ]
 
   public static let all: [AppleOSVersionMix] = ios + macos
 

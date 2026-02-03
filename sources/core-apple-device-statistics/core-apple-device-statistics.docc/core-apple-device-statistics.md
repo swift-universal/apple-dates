@@ -10,7 +10,7 @@ reports can reference authoritative numbers without network calls.
 ## What it covers
 
 - Overall metrics and breakdowns by device family.
-- iOS version mix snapshots from public App Store usage data.
+- iOS and macOS version mix snapshots.
 
 ## Data model
 
@@ -18,8 +18,8 @@ reports can reference authoritative numbers without network calls.
 - ``AppleDeviceMetric`` stores labeled values, as-of dates, and sources.
 - ``AppleDeviceMetricKind`` tags metrics as overall or breakdown.
 - ``AppleDeviceStatistics`` provides the default curated dataset.
-- ``AppleOSVersionMix`` captures OS version share snapshots.
-- ``AppleOSVersionMixes`` exposes the curated mix datasets.
+- ``AppleOSVersionMix`` captures OS version share snapshots with scopes.
+- ``AppleOSVersionMixes`` exposes curated iOS and macOS mixes.
 
 ## Topics
 
