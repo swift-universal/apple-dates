@@ -9,13 +9,14 @@ reports can reference authoritative numbers without network calls.
 
 ## What it covers
 
-- Device family snapshots (Mac, iPhone, iPad, Watch, Vision).
+- Overall metrics and breakdowns by device family.
 - Categorized metrics with source URLs for audits.
 
 ## Data model
 
 - ``AppleDeviceCategory`` groups metrics by device family or theme.
 - ``AppleDeviceMetric`` stores labeled values plus sources.
+- ``AppleDeviceMetricKind`` tags metrics as overall or breakdown.
 - ``AppleDeviceStatistics`` provides the default curated dataset.
 
 ## Topics
