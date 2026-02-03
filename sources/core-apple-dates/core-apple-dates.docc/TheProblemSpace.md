@@ -1,6 +1,6 @@
 # The Problem Space
 
-Teams often need authoritative OS dates to make decisions:
+Teams often need authoritative OS, Xcode, and Swift release dates to make decisions:
 
 - Minimum platform policies need a trustworthy release date to justify cutoffs.
 - Release notes and docs should cite exact availability dates.

@@ -10,7 +10,7 @@ func releaseDatesArePopulated() {
   assertReleaseData(OSReleaseDates.tvos)
 }
 
-private func assertReleaseData(_ releases: [OSRelease]) {
+private func assertReleaseData(_ releases: [Release]) {
   #expect(!releases.isEmpty)
   for release in releases {
     #expect(!release.version.isEmpty)

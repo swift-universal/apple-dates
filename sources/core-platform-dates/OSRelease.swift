@@ -1,4 +1,4 @@
-public struct OSRelease: Codable, Hashable, Sendable {
+public struct Release: Codable, Hashable, Sendable {
   public let version: String
   public let name: String?
   public let announcementDate: String?

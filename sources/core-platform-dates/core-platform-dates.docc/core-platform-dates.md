@@ -9,7 +9,7 @@ reuse a common data model.
 
 ## What it covers
 
-- The shared ``OSRelease`` model with optional announcement dates and source URLs.
+- The shared ``Release`` model with optional announcement dates and source URLs.
 
 ## Topics
 

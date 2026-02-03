@@ -16,7 +16,7 @@ reference availability without hitting the network.
 
 ## Data model
 
-- ``OSRelease`` captures version, optional name, announcement date, release date, and sources.
+- ``Release`` captures version, optional name, announcement date, release date, and sources.
 - ``OSReleaseDates`` exposes per-platform release lists and helper lookups.
 
 ## Update cadence

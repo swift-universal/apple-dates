@@ -1,6 +1,6 @@
 import Foundation
 
-public struct OSRelease: Codable, Hashable, Sendable {
+public struct Release: Codable, Hashable, Sendable {
   public let version: String
   public let name: String?
   public let announcementDate: String?
@@ -24,7 +24,7 @@ public struct OSRelease: Codable, Hashable, Sendable {
 
 public struct OSReleaseDates: Sendable {
   // Dates use YYYY-MM-DD (public availability). Announcement dates are optional.
-  public static let ios: [OSRelease] = [
+  public static let ios: [Release] = [
     .init(
       version: "4",
       announcementDate: "2010-04-09",
@@ -158,7 +158,7 @@ public struct OSReleaseDates: Sendable {
     ),
   ]
 
-  public static let ipados: [OSRelease] = [
+  public static let ipados: [Release] = [
     .init(
       version: "13",
       releaseDate: "2019-09-24",
@@ -213,7 +213,7 @@ public struct OSReleaseDates: Sendable {
     ),
   ]
 
-  public static let macos: [OSRelease] = [
+  public static let macos: [Release] = [
     .init(
       version: "10.7",
       name: "Lion",
@@ -349,7 +349,7 @@ public struct OSReleaseDates: Sendable {
     ),
   ]
 
-  public static let watchos: [OSRelease] = [
+  public static let watchos: [Release] = [
     .init(
       version: "1",
       releaseDate: "2015-04-24",
@@ -440,7 +440,7 @@ public struct OSReleaseDates: Sendable {
     ),
   ]
 
-  public static let tvos: [OSRelease] = [
+  public static let tvos: [Release] = [
     .init(
       version: "9",
       releaseDate: "2015-10-30",
@@ -532,7 +532,7 @@ public struct OSReleaseDates: Sendable {
 
   public static func releaseDateString(
     forVersion version: String,
-    in releases: [OSRelease]
+    in releases: [Release]
   ) -> String? {
     releases.first { $0.version == version }?.releaseDate
   }

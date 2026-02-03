@@ -1,10 +1,10 @@
 import CorePlatformDates
 
-public typealias OSRelease = CorePlatformDates.OSRelease
+public typealias Release = CorePlatformDates.Release
 
 public struct OSReleaseDates: Sendable {
   // Dates use YYYY-MM-DD (public availability). Announcement dates are optional.
-  public static let android: [OSRelease] = [
+  public static let android: [Release] = [
     .init(
       version: "10",
       releaseDate: "2019-09-03",

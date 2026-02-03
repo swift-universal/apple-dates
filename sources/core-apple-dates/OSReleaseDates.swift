@@ -1,11 +1,11 @@
 import Foundation
 import CorePlatformDates
 
-public typealias OSRelease = CorePlatformDates.OSRelease
+public typealias Release = CorePlatformDates.Release
 
 public struct OSReleaseDates: Sendable {
   // Dates use YYYY-MM-DD (public availability). Announcement dates are optional.
-  public static let ios: [OSRelease] = [
+  public static let ios: [Release] = [
     .init(
       version: "4",
       announcementDate: "2010-04-09",
@@ -139,7 +139,7 @@ public struct OSReleaseDates: Sendable {
     ),
   ]
 
-  public static let ipados: [OSRelease] = [
+  public static let ipados: [Release] = [
     .init(
       version: "13",
       releaseDate: "2019-09-24",
@@ -194,7 +194,7 @@ public struct OSReleaseDates: Sendable {
     ),
   ]
 
-  public static let macos: [OSRelease] = [
+  public static let macos: [Release] = [
     .init(
       version: "10.7",
       name: "Lion",
@@ -330,7 +330,7 @@ public struct OSReleaseDates: Sendable {
     ),
   ]
 
-  public static let watchos: [OSRelease] = [
+  public static let watchos: [Release] = [
     .init(
       version: "1",
       releaseDate: "2015-04-24",
@@ -421,7 +421,7 @@ public struct OSReleaseDates: Sendable {
     ),
   ]
 
-  public static let tvos: [OSRelease] = [
+  public static let tvos: [Release] = [
     .init(
       version: "9",
       releaseDate: "2015-10-30",
@@ -511,9 +511,92 @@ public struct OSReleaseDates: Sendable {
     ),
   ]
 
+  public static let xcode: [Release] = [
+    .init(
+      version: "11.0",
+      releaseDate: "2019-09-20",
+      sourceURLs: [
+        "https://support.apple.com/en-us/103617"
+      ]
+    ),
+    .init(
+      version: "12.0",
+      releaseDate: "2020-09-16",
+      sourceURLs: [
+        "https://support.apple.com/en-us/103036"
+      ]
+    ),
+    .init(
+      version: "13.0",
+      releaseDate: "2021-09-20",
+      sourceURLs: [
+        "https://support.apple.com/en-us/103155"
+      ]
+    ),
+    .init(
+      version: "14.0",
+      releaseDate: "2023-05-23",
+      sourceURLs: [
+        "https://support.apple.com/en-us/106358"
+      ]
+    ),
+    .init(
+      version: "15.0",
+      releaseDate: "2023-09-18",
+      sourceURLs: [
+        "https://support.apple.com/en-us/106363"
+      ]
+    ),
+    .init(
+      version: "16.0",
+      releaseDate: "2024-09-16",
+      sourceURLs: [
+        "https://support.apple.com/en-lamr/121239"
+      ]
+    ),
+  ]
+
+  public static let swift: [Release] = [
+    .init(
+      version: "2.2",
+      releaseDate: "2016-03-21",
+      sourceURLs: [
+        "https://www.swift.org/blog/swift-2.2-released/"
+      ]
+    ),
+    .init(
+      version: "3.0",
+      releaseDate: "2016-09-13",
+      sourceURLs: [
+        "https://www.swift.org/blog/swift-3.0-released/"
+      ]
+    ),
+    .init(
+      version: "4.0",
+      releaseDate: "2017-09-19",
+      sourceURLs: [
+        "https://www.swift.org/blog/swift-4.0-released/"
+      ]
+    ),
+    .init(
+      version: "5.0",
+      releaseDate: "2019-03-25",
+      sourceURLs: [
+        "https://www.swift.org/blog/swift-5-released/"
+      ]
+    ),
+    .init(
+      version: "6.0",
+      releaseDate: "2024-09-17",
+      sourceURLs: [
+        "https://www.swift.org/blog/announcing-swift-6/"
+      ]
+    ),
+  ]
+
   public static func releaseDateString(
     forVersion version: String,
-    in releases: [OSRelease]
+    in releases: [Release]
   ) -> String? {
     releases.first { $0.version == version }?.releaseDate
   }
@@ -536,5 +619,13 @@ public struct OSReleaseDates: Sendable {
 
   public static func tvosReleaseDateString(forVersion version: String) -> String? {
     releaseDateString(forVersion: version, in: tvos)
+  }
+
+  public static func xcodeReleaseDateString(forVersion version: String) -> String? {
+    releaseDateString(forVersion: version, in: xcode)
+  }
+
+  public static func swiftReleaseDateString(forVersion version: String) -> String? {
+    releaseDateString(forVersion: version, in: swift)
   }
 }

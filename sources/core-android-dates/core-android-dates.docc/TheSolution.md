@@ -3,7 +3,7 @@
 CoreAndroidDates packages release timelines as static Swift data.
 
 - A small, typed model
-  - ``OSRelease`` stores version, optional marketing name, announcement date, release date,
+  - ``Release`` stores version, optional marketing name, announcement date, release date,
     and source URLs.
   - ``OSReleaseDates`` groups releases with helper lookups.
 

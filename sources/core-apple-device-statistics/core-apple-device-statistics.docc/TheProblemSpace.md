@@ -1,6 +1,7 @@
 # The Problem Space
 
-Teams need trustworthy device statistics for planning, reporting, and audits:
+Teams need trustworthy device statistics and OS version mix data for planning, reporting, and
+audits:
 
 - Roadmaps require a consistent view of device family mix.
 - Docs and slides must cite the same sources across teams.

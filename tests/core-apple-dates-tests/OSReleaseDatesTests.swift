@@ -8,9 +8,11 @@ func releaseDatesArePopulated() {
   assertReleaseData(OSReleaseDates.macos)
   assertReleaseData(OSReleaseDates.watchos)
   assertReleaseData(OSReleaseDates.tvos)
+  assertReleaseData(OSReleaseDates.xcode)
+  assertReleaseData(OSReleaseDates.swift)
 }
 
-private func assertReleaseData(_ releases: [OSRelease]) {
+private func assertReleaseData(_ releases: [Release]) {
   #expect(!releases.isEmpty)
   for release in releases {
     #expect(!release.version.isEmpty)
