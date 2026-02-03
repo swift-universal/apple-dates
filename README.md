@@ -18,12 +18,19 @@ import CoreAppleDeviceStatistics
 let categories = AppleDeviceStatistics.categories
 ```
 
+```swift
+import CoreAndroidDeviceStatistics
+
+let categories = AndroidDeviceStatistics.categories
+```
+
 ## Documentation
 
 DocC bundles live at:
 
 - `sources/core-apple-dates/core-apple-dates.docc`
 - `sources/core-apple-device-statistics/core-apple-device-statistics.docc`
+- `sources/core-android-device-statistics/core-android-device-statistics.docc`
 
 Preview locally:
 
@@ -37,6 +44,12 @@ xcrun docc preview \
 xcrun docc preview \
   sources/core-apple-device-statistics/core-apple-device-statistics.docc \
   --fallback-display-name "CoreAppleDeviceStatistics" \
+  --fallback-bundle-identifier "me.wrkstrm.swift-core-platform-metrics" \
+  --fallback-bundle-version "1.0.0"
+
+xcrun docc preview \
+  sources/core-android-device-statistics/core-android-device-statistics.docc \
+  --fallback-display-name "CoreAndroidDeviceStatistics" \
   --fallback-bundle-identifier "me.wrkstrm.swift-core-platform-metrics" \
   --fallback-bundle-version "1.0.0"
 ```

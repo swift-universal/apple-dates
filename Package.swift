@@ -14,6 +14,7 @@ let package = Package(
   products: [
     .library(name: "CoreAppleDates", targets: ["CoreAppleDates"]),
     .library(name: "CoreAppleDeviceStatistics", targets: ["CoreAppleDeviceStatistics"]),
+    .library(name: "CoreAndroidDeviceStatistics", targets: ["CoreAndroidDeviceStatistics"]),
   ],
   targets: [
     .target(
@@ -23,6 +24,10 @@ let package = Package(
     .target(
       name: "CoreAppleDeviceStatistics",
       path: "sources/core-apple-device-statistics"
+    ),
+    .target(
+      name: "CoreAndroidDeviceStatistics",
+      path: "sources/core-android-device-statistics"
     ),
     .testTarget(
       name: "CoreAppleDatesTests",
